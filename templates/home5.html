@@ -1,0 +1,41 @@
+<!doctype html>
+{% load static %}
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>DGL</title>
+  <link rel="stylesheet" href="{% static 'main.css' %}" />
+  <link rel="stylesheet" href="{% static 'home.css' %}" />
+</head>
+<body class="centered">
+<main>
+  <div class="left-side">
+    <div class="logo"></div>
+    <nav class="menu">
+      <li class="ubers"><a href="#">Übersicht</a></li>
+      <li class="aktiv"><a href="#">Aktivitäten</a></li>
+      <li class="daten"><a href="#">Daten</a></li>
+      <li class="einka"><a href="#">Einkauf</a></li>
+      <li class="einst"><a href="#">Einstellungen</a></li>
+    </nav>
+  </div>
+  <div class="right-side">
+    <div class="content centered">
+      <div class="content-panel tree-op centered">
+        <div class="content-area middled">
+          <div class="ecosia"></div>
+          <h1 class="final">Fragebogen abgeschlossen!</h1>
+          <div class="final-end">
+            <button class="classic-btn">Jetzt loslegen</button>
+            <div class="assistant-final">
+              <div class="think">Vielen Dank für deine Antworten. Jetzt können wir gemeinsam loslegen.</div>
+              <div class="assistant2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+{% load static %}
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>DGL</title>
+  <link rel="stylesheet" href="{% static 'main.css' %}" />
+  <link rel="stylesheet" href="{% static 'home.css' %}" />
+</head>
+<body class="centered">
+<main>
+  <div class="left-side">
+    <div class="logo"></div>
+    <nav class="menu">
+      <li class="ubers"><a href="#">Übersicht</a></li>
+      <li class="aktiv"><a href="#">Aktivitäten</a></li>
+      <li class="daten"><a href="#">Daten</a></li>
+      <li class="einka"><a href="#">Einkauf</a></li>
+      <li class="einst"><a href="#">Einstellungen</a></li>
+    </nav>
+  </div>
+  <div class="right-side">
+    <div class="content centered">
+      <div class="content-panel tree-op">
+        <div class="content-panel-3">
+          <button class="classic-btn classic-btn-small" onclick='document.location="/homepage3/"' >&lt; Zurück</button>
+          <div class="content-area">
+            <div class="content-header">
+              <p class="seite">Seite 2/2</p>
+              <h1>Fragebogen</h1>
+            </div>
+            <div>
+              <div class="block">
+                <form method="POST">
+                  {% csrf_token %}
+                  <label>
+                    <p>Anmerkungen</p>
+                    <textarea class="comment" name="anmerkungen" autofocus></textarea>
+                  </label>
+              </div>
+            </div>
+          </div>
+          <p>
+            <input class="classic-btn classic-btn-small" type="submit" value="Weiter &gt;" />
+          </p>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>

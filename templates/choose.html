@@ -1,0 +1,58 @@
+<!doctype html>
+{% load static %}
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>DGL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'main.css' %}" />
+  <link rel="stylesheet" href="{% static 'auth.css' %}" />
+</head>
+<body class="centered">
+<main>
+  <aside class="left-side">
+    <div class="cover-img tree2"></div>
+  </aside>
+  <div class="right-side">
+    <div class="content">
+<!--
+      <p class="go-back">
+        <a>Zurück</a>
+      </p>
+-->
+      <p class="input-comment right-text">
+        Ihre Praxis hat schon einen Account?
+        <a class="passwd-help" href="/">Hier Einloggen</a>
+      </p>
+      <div class="centered" style="height:500px;">
+        <div class="block">
+          <h1 class="content-header">Jetzt Registrieren</h1>
+          <div class="auth-form">
+            <p class="input-comment reg-comment">Klimaschutz in der Praxis</p>
+            <p class="input-comment reg-comment bold">Einfach, Ökonomisch &amp; Digital</p>
+            <div class="register-card" onclick='document.location="/accounts/register"'>
+              <div class="register-card-icon praxis-icon"></div>
+              <div class="register-card-info">
+                <h5>Praxis</h5>
+                <p class="input-comment">Hier für Ihre Praxis registrieren</p>
+              </div>
+              <div class="register-card-icon continue-icon"></div>
+            </div>
+            <div class="register-card">
+              <div class="register-card-icon demo-icon"></div>
+              <div class="register-card-info">
+                <h5>Praxis</h5>
+                <p class="input-comment">Hier für Ihre Praxis registrieren</p>
+              </div>
+              <div class="register-card-icon continue-icon"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+{% load static %}
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>DGL</title>
+  <link rel="stylesheet" href="{% static 'main.css' %}" />
+  <link rel="stylesheet" href="{% static 'auth.css' %}" />
+</head>
+<body class="centered">
+<main>
+  <aside class="left-side">
+    <div class="cover-img tree1"></div>
+  </aside>
+  <div class="right-side">
+    <div class="content">
+<!--
+      <p class="go-back">
+        <a>Zurück</a>
+      </p>
+-->
+      <h1 class="content-header">Jetzt Einloggen</h1>
+      <div class="auth-form">
+        <form method="POST"> 
+          {% csrf_token %}
+          <label>
+            <p class="input-label">Name</p>
+            <p><input class="std-input" type="text" name="username" placeholder="Internisten in Köln" autofocus /></p>
+          </label>
+          <label>
+            <p class="input-label">Passwort</p>
+            <p><input class="std-input" type="password" name="password" placeholder="Hier eingeben" /></p>
+          </label>
+          <p><a class="passwd-help" href="#">Passwort vergessen?</a></p>
+          <p class="input-label"><br/></p>
+          <p>
+            <input class="std-input std-submit" type="submit" value="Einloggen" />
+          </p>
+          <div>
+            {% for message in messages%}
+            <h3>{{message}}</h3>
+            {%endfor%}
+          </div>
+          <p class="input-comment input-secured">Your Info is safely secured</p>
+          <hr class="input-wrapper"/>
+        </form>
+          <p class="input-comment">oder</p>
+          <p>
+            <button class="std-input btn-google">Mit Google anmelden</button>
+          </p>
+          <p>
+              <button class="std-input btn-register" onclick='document.location="choose"'>Jetzt registrieren</button>
+          </p>
+          <p class="input-comment">Sie haben noch kein Konto?</p>
+        
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>

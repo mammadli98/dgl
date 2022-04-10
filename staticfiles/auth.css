@@ -1,0 +1,214 @@
+.left-side {
+  width: 45%;
+  height: 100%;
+}
+
+.right-side {
+  width: 55%;
+  height: 100%;
+}
+
+.cover-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom-left-radius: 60px;
+  border-top-left-radius: 60px;
+  height: 100%;
+}
+
+.content {
+  padding: 40px;
+}
+
+.go-back {
+  color: #8692A6;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.go-back::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url('../static/img/icon/arrow_back.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: bottom;
+  margin-right: 5px;
+}
+
+.content-header {
+  text-align: center;
+  margin: 16px auto 32px;
+  font-size: 30px;
+}
+
+.auth-form {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.input-label {
+  color: #696F79;
+  margin-bottom: 14px;
+}
+
+.std-input {
+  width: 400px;
+  height: 48px;
+  line-height: 48px;
+  vertical-align: middle;
+  border-radius: 6px;
+  border: 1px solid #8692A6;
+  padding: 0 24px;
+  color: #494949;
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+
+.std-input::placeholder {
+  color: #8692A6;
+}
+
+.std-input:focus {
+  border: 1px solid #1565D8;
+  box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.11);
+}
+
+.std-submit {
+  background-color: #1565D8;
+  border: 1px solid #1565D8;
+  color: #ffffff;
+  font-weight: inherit;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn-google::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url('../static/img/icon/google.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: text-bottom;
+  position: relative;
+  left: -50px;
+}
+
+.btn-register {
+  background-color: #C7C7C7;
+  color: #ffffff;
+}
+
+.btn-register:hover {
+  background-color: #1565D8;
+}
+
+.passwd-help {
+  color: #23A455;
+  font-weight: 500;
+}
+
+.input-comment {
+  text-align: center;
+  font-size: 12px;
+  line-height: 12px;
+  color: #8692A6;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.input-secured::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url('../static/img/icon/action_lock.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: bottom;
+}
+
+.input-wrapper {
+  background-color: #cdcdcd;
+  height: 1px;
+  border: none;
+  margin: 18px 0;
+}
+
+.register-card {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 400px;
+  height: 100px;
+  cursor: pointer;
+  box-shadow: 0px 2px 14px 1px rgba(0, 0, 0, 0.06);
+  border-radius: 6px;
+  border: 1px solid #ffffff;
+  margin-top: 30px;
+}
+
+.register-card:hover {
+  background-color: #F5F9FF;
+  border: 1px solid #1565D8;
+  box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.04);
+}
+
+.register-card:hover .continue-icon {
+  position: relative;
+  left: 4px;
+}
+
+.register-card-icon {
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.praxis-icon {
+  background-image: url('../static/img/icon/praxis_icon.png');
+}
+
+.demo-icon {
+  background-image: url('../static/img/icon/demo_icon.svg');
+}
+
+.register-card-info {
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.register-card-info h5 {
+  font-size: 16px;
+}
+
+.continue-icon {
+  width: 20px;
+  height: 20px;
+  background-image: url('../static/img/icon/arrow_right.svg');
+}
+
+.reg-comment {
+  font-size: 18px;
+}
+
+.reg-agree {
+  font-size: 14px;
+  margin: 10px auto 30px;
+}
+
+.spc-btwn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.small-input {
+  width: 48px;
+  padding: 0 12px;
+}

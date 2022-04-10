@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 95vw;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #ddd;
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+main {
+  width: 1140px;
+  height: 690px;
+  border-radius: 60px;
+  background-color: #fff;
+  display: flex;
+}
+
+p {
+  line-height: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.block {
+  display: block;
+}
+
+.right-text {
+  text-align: right;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.tree1 {
+  background-image: url('../static/img/cover/tree1.png');
+}
+
+.tree2 {
+  background-image: url('../static/img/cover/tree2.png');
+}
+
+.tree3 {
+  background-image: url('../static/img/cover/tree3.png');
+}
+
+.tree4 {
+  background-image: url('../static/img/cover/tree4.png');
+}
+
+.tree5 {
+  background-image: url('../static/img/cover/tree5.png');
+}

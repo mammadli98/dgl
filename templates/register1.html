@@ -1,0 +1,74 @@
+<!doctype html>
+{% load static %}
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>DGL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="{% static 'main.css' %}" />
+  <link rel="stylesheet" href="{% static 'auth.css' %}" />
+</head>
+<body class="centered">
+<main>
+  <aside class="left-side">
+    <div class="cover-img tree4"></div>
+  </aside>
+  <div class="right-side">
+    <div class="content">
+      <div class="spc-btwn">
+        <p class="go-back">
+          <a href="/choose/">Zurück</a>
+        </p>
+        <p class="input-comment">
+          Schritt 1/2
+        </p>
+        <p class="input-label bold">
+          <a href="#">Account</a>
+        </p>
+      </div>
+      <h1 class="content-header">Praxis Konto erstellen!</h1>
+      <div class="auth-form">
+        <form method="POST">
+          {% csrf_token %}
+          <label>
+            <p class="input-label">Benutzername</p>
+            <p><input class="std-input" type="text" name="username" placeholder="Dr. Jan Derboven" autofocus /></p>
+          </label>
+          <label>
+            <p class="input-label">E-Mail Adresse</p>
+            <p><input class="std-input" type="email" name="email" placeholder="max@mustermann.de" /></p>
+          </label>
+          <label>
+            <p class="input-label">Passwort</p>
+            <p><input class="std-input" type="password" name="password1" placeholder="Passwort123" /></p>
+          </label>
+          <label>
+            <p class="input-label">Passwort wiederholen</p>
+            <p><input class="std-input" type="password" name="password2" placeholder="Passwort123" /></p>
+          </label>
+          <div>
+            {% for message in messages%}
+            <h3>{{message}}</h3>
+            {%endfor%}
+          </div>
+          <label>
+            <p class="input-comment reg-agree">
+              <input type="checkbox" checked /> Ich stimme den Allgemeinen Geschäftsbedingungen zu
+            </p>
+          </label>
+          <p>
+            <input class="std-input std-submit" type="submit" value="Account registrieren" />
+          </p>
+          <p class="input-comment input-secured">Your Info is safely secured</p>
+        </form>
+
+        
+
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>

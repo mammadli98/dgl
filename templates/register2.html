@@ -1,0 +1,69 @@
+<!doctype html>
+{% load static %}
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>DGL</title>
+  <link rel="stylesheet" href="{% static 'main.css' %}" />
+  <link rel="stylesheet" href="{% static 'auth.css' %}" />
+</head>
+<body class="centered">
+<main>
+  <aside class="left-side">
+    <div class="cover-img tree5"></div>
+  </aside>
+  <div class="right-side">
+    <div class="content">
+      <div class="spc-btwn">
+        <p class="go-back">
+          <a href="/accounts/register">Zurück</a>
+        </p>
+        <p class="input-comment">
+          Schritt 2/2
+        </p>
+        <p class="input-label bold">
+          <a href="#">Praxis Infos</a>
+        </p>
+      </div>
+      <h1 class="content-header">Praxis Informationen</h1>
+      <div class="auth-form">
+        <form method="POST">
+          {% csrf_token %}
+          <label>
+            <p class="input-label">Name der Praxis</p>
+            <p><input class="std-input" type="text" name="name_der_praxis" placeholder="Internisten in Köln" autofocus /></p>
+          </label>
+          <label>
+            <p class="input-label">Fachrichtung</p>
+            <p><input class="std-input" type="text" name="fachrichtung" placeholder="Hausarzt" /></p>
+          </label>
+          <div style="display:flex;">
+          <label>
+            <p class="input-label">Straße</p>
+            <p><input class="std-input" type="text" name="strasse" placeholder="Drachenfelsstr" /></p>
+          </label>
+          <label style="margin-left:10px;">
+            <p class="input-label">Nr.</p>
+            <p><input class="std-input small-input"  type="number" name="nr" placeholder="50" /></p>
+          </label>
+          </div>
+          <label>
+            <p class="input-label">Postleitzahl</p>
+            <p><input class="std-input" type="number" name="postleitzahl" placeholder="50939" /></p>
+          </label>
+          <div>
+            {% for message in messages%}
+            <h3>{{message}}</h3>
+            {%endfor%}
+          </div>
+          <p>
+            <input class="std-input std-submit" type="submit" value="Jetzt starten" />
+          </p>
+          <p class="input-comment input-secured">Your Info is safely secured</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
